@@ -1,0 +1,7 @@
+template_path: stacks/vpc.yaml
+parameters:
+  Project: {{ environment_config.project_code }}
+  CidrBlock: "10.20.0.0/16"
+stack_tags:
+  Environment: {{ environment_path.0 }}
+  Project: {{ environment_config.project_code }}
