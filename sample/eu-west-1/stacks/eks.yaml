@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: VPC for EKS sample
+
+Parameters:
+  Project:
+    Description: Project name
+    Type: String
+  IAMStack:
+    Description: Name of the stack that defines IAM role for EKS cluster
+    Type: String
+  VpcStack:
+    Description: Name of the stack that defines VPC and SecurityGroup for EKS cluster
+    Type: String
+
+Resources:
+  EKS: 
+    Type: AWS::EKS::Cluster
+    Properties:
+      Name: !Sub ${Project}-Cluster
+      Version: 1.11
+      RoleArn: 
+        Fn::ImportValue: !Sub ${IAMStack}:EKSRoleArn
+      ResourcesVpcConfig:
+        SecurityGroupIds:
+        - Fn::ImportValue: !Sub ${VpcStack}:ControlPlaneSecurityGroup
+        SubnetIds:
+          - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet1Id
+          - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet2Id

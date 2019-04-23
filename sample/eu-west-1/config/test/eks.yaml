@@ -1,0 +1,8 @@
+template_path: stacks/eks.yaml
+parameters:
+  Project: {{ environment_config.project_code }}
+  IAMStack: {{ environment_config.project_code }}-{{ environment_path.0 }}-iam
+  VpcStack: {{ environment_config.project_code }}-{{ environment_path.0 }}-vpc
+stack_tags:
+  Environment: {{ environment_path.0 }}
+  Project: {{ environment_config.project_code }}

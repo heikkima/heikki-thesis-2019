@@ -170,6 +170,13 @@ Resources:
       SubnetId: !Ref PrivateSubnet2
       RouteTableId: !Ref PrivateRouteTable2
 
+  # SecurityGroup for control plane
+  ControlPlaneSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Cluster communication with worker nodes
+      VpcId: !Ref Vpc
+
 Outputs:
   VpcId:
     Description: VPC id
@@ -185,19 +192,25 @@ Outputs:
     Description: Public subnet 1 id
     Value: !Ref PublicSubnet1
     Export:
-      Name: !Sub ${AWS::StackName}:PublicSubnet1-Id
+      Name: !Sub ${AWS::StackName}:PublicSubnet1Id
   PublicSubnet2Id:
     Description: Public subnet 2 id
     Value: !Ref PublicSubnet2
     Export:
-      Name: !Sub ${AWS::StackName}:PublicSubnet2-Id
+      Name: !Sub ${AWS::StackName}:PublicSubnet2Id
   PrivateSubnet1Id:
     Description: Private subnet 1 id
     Value: !Ref PrivateSubnet1
     Export:
-      Name: !Sub ${AWS::StackName}:PrivateSubnet1-Id
+      Name: !Sub ${AWS::StackName}:PrivateSubnet1Id
   PrivateSubnet2Id:
     Description: Private subnet 2 id
     Value: !Ref PrivateSubnet2
     Export:
-      Name: !Sub ${AWS::StackName}:PrivateSubnet2-Id
+      Name: !Sub ${AWS::StackName}:PrivateSubnet2Id
+  ControlPlaneSecurityGroup:
+    Description: Security group for the cluster control plane communication with worker nodes
+    Value: !Ref ControlPlaneSecurityGroup
+    Export:
+      Name: !Sub ${AWS::StackName}:ControlPlaneSecurityGroup
+
