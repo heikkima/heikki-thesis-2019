@@ -1,0 +1,15 @@
+template_path: stacks/minion-nodes.yaml
+parameters:
+  ClusterName: "thesis-eks-cluster"
+  VpcStack: "thesis-eks-test-vpc"
+  NodeImageId: "ami-0e82e73403dd69fa3"
+  KeyName: "eks-sample-key"
+  NodeAutoScalingGroupMinSize: "1"
+  NodeAutoScalingGroupMaxSize: "10"
+  NodeAutoScalingGroupDesiredCapacity: "2"
+  NodeVolumeSize: "20"
+  NodeGroupName: {{ environment_config.project_code }}-nodes
+  # NodeInstanceType: 
+stack_tags:
+  Environment: {{ environment_path.0 }}
+  Project: {{ environment_config.project_code }}

@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: VPC for EKS sample
+Description: EKS cluster for EKS sample
 
 Parameters:
   Project:
@@ -16,18 +16,24 @@ Resources:
   EKS: 
     Type: AWS::EKS::Cluster
     Properties:
-      Name: !Sub ${Project}-Cluster
+      Name: !Sub ${Project}-cluster
       Version: 1.11
       RoleArn: 
         Fn::ImportValue: !Sub ${IAMStack}:EKSRoleArn
       ResourcesVpcConfig:
         SecurityGroupIds:
         - Fn::ImportValue: !Sub ${VpcStack}:ControlPlaneSecurityGroup
-        SubnetIds:
-          - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet1Id
-          - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet2Id
+        SubnetIds: 
+          !Split 
+            - ','
+            - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnets
 
 Outputs:
   ClusterEndPoint:
     Description: Endpoint for the Kubernetes API
     Value: !GetAtt EKS.Endpoint
+  ClusterName:
+    Description: Name of the EKS cluster
+    Value: !Ref EKS
+    Export:
+      Name: !Sub ${AWS::StackName}:ClusterName
