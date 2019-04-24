@@ -26,3 +26,8 @@ Resources:
         SubnetIds:
           - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet1Id
           - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnet2Id
+
+Outputs:
+  ClusterEndPoint:
+    Description: Endpoint for the Kubernetes API
+    Value: !GetAtt EKS.Endpoint
