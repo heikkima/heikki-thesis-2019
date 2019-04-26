@@ -1,8 +1,9 @@
 template_path: stacks/eks.yaml
 parameters:
   Project: {{ environment_config.project_code }}
-  IAMStack: {{ environment_config.project_code }}-{{ environment_path.0 }}-iam
-  VpcStack: {{ environment_config.project_code }}-{{ environment_path.0 }}-vpc
+  ControlPlaneSecurityGroup: !stack_output vpc::ControlPlaneSecurityGroup
+  PrivateSubnets: !stack_output vpc::PrivateSubnets
+  EKSRoleArn: !stack_output iam::EKSRoleArn
 stack_tags:
   Environment: {{ environment_path.0 }}
   Project: {{ environment_config.project_code }}

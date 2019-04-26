@@ -5,11 +5,14 @@ Parameters:
   Project:
     Description: Project name
     Type: String
-  IAMStack:
-    Description: Name of the stack that defines IAM role for EKS cluster
+  EKSRoleArn:
+    Description: Arn of the role that EKS will assume
     Type: String
-  VpcStack:
-    Description: Name of the stack that defines VPC and SecurityGroup for EKS cluster
+  ControlPlaneSecurityGroup:
+    Description: ID of the securitygroup for EKS cluster
+    Type: String
+  PrivateSubnets:
+    Description: List of subnets where nodes are deployed
     Type: String
 
 Resources:
@@ -18,15 +21,14 @@ Resources:
     Properties:
       Name: !Sub ${Project}-cluster
       Version: 1.11
-      RoleArn: 
-        Fn::ImportValue: !Sub ${IAMStack}:EKSRoleArn
+      RoleArn: !Ref EKSRoleArn
       ResourcesVpcConfig:
         SecurityGroupIds:
-        - Fn::ImportValue: !Sub ${VpcStack}:ControlPlaneSecurityGroup
+        - !Ref ControlPlaneSecurityGroup
         SubnetIds: 
           !Split 
             - ','
-            - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnets
+            - !Ref PrivateSubnets
 
 Outputs:
   ClusterEndPoint:

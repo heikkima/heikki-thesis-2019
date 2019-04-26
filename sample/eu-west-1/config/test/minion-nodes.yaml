@@ -1,7 +1,9 @@
 template_path: stacks/minion-nodes.yaml
 parameters:
-  ClusterName: "thesis-eks-cluster"
-  VpcStack: "thesis-eks-test-vpc"
+  ClusterName: !stack_output eks::ClusterName
+  VpcId: !stack_output vpc::VpcId
+  ControlPlaneSG: !stack_output vpc::ControlPlaneSecurityGroup
+  PrivateSubnets: !stack_output vpc::PrivateSubnets
   NodeImageId: "ami-0e82e73403dd69fa3"
   KeyName: "eks-sample-key"
   NodeAutoScalingGroupMinSize: "1"

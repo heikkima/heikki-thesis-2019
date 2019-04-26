@@ -5,8 +5,14 @@ Parameters:
   ClusterName:
     Description: Name EKS cluster
     Type: String
-  VpcStack:
-    Description: Name of the stack that defines VPC and SecurityGroup for EKS cluster
+  VpcId: 
+    Description: VPC ID where minions are deployed
+    Type: String
+  ControlPlaneSG:
+    Description: ID of contorl plane's securitygroup
+    Type: String
+  PrivateSubnets:
+    Description: List of subnets where nodes are deployed
     Type: String
   NodeImageId:
     Description: AMI id for the node instances.
@@ -149,11 +155,10 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for all nodes in the cluster
-      VpcId: 
-        Fn::ImportValue: !Sub ${VpcStack}:VpcId
+      VpcId: !Ref VpcId
       Tags:
-        - Key: Cluster
-          Value: !Ref ClusterName
+        - Key: !Sub kubernetes.io/cluster/${ClusterName} # Required to connect to master
+          Value: owned
 
   NodeSecurityGroupIngress:
     Type: AWS::EC2::SecurityGroupIngress
@@ -172,9 +177,7 @@ Resources:
     Properties:
       Description: Allow worker Kubelets and pods to receive communication from the cluster control plane
       GroupId: !Ref NodeSecurityGroup
-      SourceSecurityGroupId: 
-        Fn::ImportValue:
-          !Sub ${VpcStack}:ControlPlaneSecurityGroup
+      SourceSecurityGroupId: !Ref ControlPlaneSG
       IpProtocol: tcp
       FromPort: 1025
       ToPort: 65535
@@ -184,9 +187,7 @@ Resources:
     DependsOn: NodeSecurityGroup
     Properties:
       Description: Allow the cluster control plane to communicate with worker Kubelet and pods
-      GroupId: 
-        Fn::ImportValue:
-          !Sub ${VpcStack}:ControlPlaneSecurityGroup
+      GroupId: !Ref ControlPlaneSG
       DestinationSecurityGroupId: !Ref NodeSecurityGroup
       IpProtocol: tcp
       FromPort: 1025
@@ -198,9 +199,7 @@ Resources:
     Properties:
       Description: Allow pods running extension API servers on port 443 to receive communication from cluster control plane
       GroupId: !Ref NodeSecurityGroup
-      SourceSecurityGroupId: 
-        Fn::ImportValue:
-          !Sub ${VpcStack}:ControlPlaneSecurityGroup
+      SourceSecurityGroupId: !Ref ControlPlaneSG
       IpProtocol: tcp
       FromPort: 443
       ToPort: 443
@@ -210,9 +209,7 @@ Resources:
     DependsOn: NodeSecurityGroup
     Properties:
       Description: Allow the cluster control plane to communicate with pods running extension API servers on port 443
-      GroupId:
-        Fn::ImportValue:
-          !Sub ${VpcStack}:ControlPlaneSecurityGroup
+      GroupId: !Ref ControlPlaneSG
       DestinationSecurityGroupId: !Ref NodeSecurityGroup
       IpProtocol: tcp
       FromPort: 443
@@ -223,9 +220,7 @@ Resources:
     DependsOn: NodeSecurityGroup
     Properties:
       Description: Allow pods to communicate with the cluster API Server
-      GroupId: 
-        Fn::ImportValue:
-          !Sub ${VpcStack}:ControlPlaneSecurityGroup
+      GroupId: !Ref ControlPlaneSG
       SourceSecurityGroupId: !Ref NodeSecurityGroup
       IpProtocol: tcp
       ToPort: 443
@@ -241,13 +236,13 @@ Resources:
       VPCZoneIdentifier:
         !Split
           - ','
-          - Fn::ImportValue: !Sub ${VpcStack}:PrivateSubnets
+          - !Ref PrivateSubnets
       Tags:
         - Key: Name
-          Value: !Sub ${NodeGroupName}-Node
+          Value: !Sub ${NodeGroupName}
           PropagateAtLaunch: true
-        - Key: Cluster
-          Value: !Ref ClusterName
+        - Key: !Sub kubernetes.io/cluster/${ClusterName} # Required to connect to master
+          Value: owned
           PropagateAtLaunch: true
     UpdatePolicy:
       AutoScalingRollingUpdate:
@@ -273,16 +268,15 @@ Resources:
             DeleteOnTermination: true
       UserData:
         Fn::Base64:
-          Fn::Sub: 
-            - |
-              #!/bin/bash
-              set -o xtrace
-              /etc/eks/bootstrap.sh ${ClusterName}
-              /opt/aws/bin/cfn-signal --exit-code $? \
-                      --stack  ${AWS::StackName} \
-                      --resource NodeGroup  \
-                      --region ${AWS::Region}
-            - ClusterName: !Ref ClusterName
+          !Sub |
+            #!/bin/bash
+            set -o xtrace
+            /etc/eks/bootstrap.sh ${ClusterName} 
+            /opt/aws/bin/cfn-signal --exit-code $? \
+                    --stack  ${AWS::StackName} \
+                    --resource NodeGroup  \
+                    --region ${AWS::Region}
+
 Outputs:
 
   NodeInstanceRole:
