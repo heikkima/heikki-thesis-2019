@@ -144,7 +144,7 @@ spec:
             - --stderrthreshold=info
             - --cloud-provider=aws
             - --skip-nodes-with-local-storage=false
-            - --nodes=1:10:thesis-eks-test-minion-nodes-NodeGroup-1286ML1N7L7VO
+            - --nodes=1:10:<Node Autoscaling group name> # PLEASE REPLACE WITH AUTOSCALING GROUP NAME
           volumeMounts:
             - name: ssl-certs
               mountPath: /etc/ssl/certs/ca-certificates.crt
