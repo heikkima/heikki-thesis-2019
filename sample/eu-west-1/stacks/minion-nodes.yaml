@@ -150,6 +150,22 @@ Resources:
         - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
         - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
         - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
+      Policies:
+        -
+          PolicyName: Autoscaling
+          PolicyDocument: 
+            Version: 2012-10-17
+            Statement: 
+              - 
+                Effect: Allow
+                Action: 
+                  - autoscaling:DescribeAutoScalingGroups
+                  - autoscaling:DescribeAutoScalingInstances
+                  - autoscaling:SetDesiredCapacity
+                  - autoscaling:DescribeTags
+                  - autoscaling:TerminateInstanceInAutoScalingGroup
+                Resource: '*'
+
 
   NodeSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -231,15 +247,14 @@ Resources:
     Properties:
       DesiredCapacity: !Ref NodeAutoScalingGroupDesiredCapacity
       LaunchConfigurationName: !Ref NodeLaunchConfig
+      Cooldown: 60
       MinSize: !Ref NodeAutoScalingGroupMinSize
       MaxSize: !Ref NodeAutoScalingGroupMaxSize
       VPCZoneIdentifier:
-        !Split
-          - ','
-          - !Ref PrivateSubnets
+        !Split [',', !Ref PrivateSubnets]
       Tags:
         - Key: Name
-          Value: !Sub ${NodeGroupName}
+          Value: !Ref NodeGroupName
           PropagateAtLaunch: true
         - Key: !Sub kubernetes.io/cluster/${ClusterName} # Required to connect to master
           Value: owned
@@ -248,7 +263,7 @@ Resources:
       AutoScalingRollingUpdate:
         MaxBatchSize: 1
         MinInstancesInService: !Ref NodeAutoScalingGroupDesiredCapacity
-        PauseTime: PT5M
+        PauseTime: PT2M
 
   NodeLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration

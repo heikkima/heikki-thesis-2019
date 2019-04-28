@@ -8,7 +8,7 @@ parameters:
   KeyName: "eks-sample-key"
   NodeAutoScalingGroupMinSize: "1"
   NodeAutoScalingGroupMaxSize: "10"
-  NodeAutoScalingGroupDesiredCapacity: "2"
+  NodeAutoScalingGroupDesiredCapacity: "3"
   NodeVolumeSize: "20"
   NodeGroupName: {{ environment_config.project_code }}-nodes
   # NodeInstanceType: 
