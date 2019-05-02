@@ -32,9 +32,6 @@ Resources:
           !Split [',', !Join [',', [!Ref PrivateSubnets, !Ref PublicSubnets]] ]
 
 Outputs:
-  ClusterEndPoint:
-    Description: Endpoint for the Kubernetes API
-    Value: !GetAtt EKS.Endpoint
   ClusterName:
     Description: Name of the EKS cluster
     Value: !Ref EKS

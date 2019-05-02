@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 data:
   mapRoles: |
-    - rolearn: <Node Instance Role ARN> # Replace with node instance role arn
+    - rolearn: <node instance role arn> # Replace with node instance role arn
       username: system:node:{{EC2PrivateDNSName}}
       groups:
         - system:bootstrappers
