@@ -1,0 +1,4 @@
+template_path: stacks/iam.yaml
+stack_tags:
+  Environment: {{ environment_path.0 }}
+  Project: {{ environment_config.project_code }}
