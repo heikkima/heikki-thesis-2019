@@ -10,89 +10,126 @@ Tietojenkäsittely
 
 2018
 
-| **Tekijä(t)**  Heikki Ma                                                                                                                                                                                                                                                                                                                                                                                                                       |                                    |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| **Koulutusohjelma** Tietojenkäsittelyn koulutusohjelma                                                                                                                                                                                                                                                                                                                                                                                         |                                    |
-| **Raportin/Opinnäytetyön nimi**                                                                                                                                                                                                                                                                                                                                                                                                                | **Sivu- ja liitesivumäärä** 20 + 2 |
-| Kubernetes ja AWS EKS                                                                                                                                                                                                                                                                                                                                                                                                                          |                                    |
-| Tiivistelmä edellytetään pääsääntöisesti vain opinnäytetöissä. Opinnäytetyön tiivistelmässä esitetään työn keskeiset kohdat siten, että lukija ymmärtää tiivistelmän luettuaan työn sisältämät pääasiat. Tiivistelmässä esitetään selvitettävän asian tausta, työn tavoite ja rajaus, työn toteutustapa ja mahdolliset menetelmät, työn tekemisen ajankohta sekä tulokset ja päätelmät. Tiivistelmä etenee raportin mukaisessa järjestyksessä. |                                    |
-| **Asiasanat** Tärkeysjärjestyksessä 3–6 asiasanaa, jotka kuvaavat työn sisältöä parhaiten. Käytä asiasanojen valinnassa. Yleistä suomalaista asiasanastoa (YSA) osoitteessa <http://finto.fi/fi/>                                                                                                                                                                                                                                              |                                    |
+| **Tekijä(t)**  Heikki Ma                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |                                    |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| **Koulutusohjelma** Tietojenkäsittelyn koulutusohjelma                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                    |
+| **Raportin/Opinnäytetyön nimi**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | **Sivu- ja liitesivumäärä** 28 + 1 |
+| Kubernetes ja AWS EKS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                    |
+| Opinnäytetyö oli rajattu tutkimaan Kubernetes konttiorkestrointityökalu ja Amazon Web Servicen (AWS) uutta Kubernetes palvelua, Amazon Elastic Container Service for Kubernetes (AWS EKS). Tutkimus koostuu teorian- ja käytännön osuuksista. Kubernetes on Googlen aloittama projekti. Google julkaisi projektin avoimena lähdekoodina maailmalle. Kubernetes on konttiorkestrointityökalu, jonka tehtävänä on hallita useita kontteja keskitetysti. Yksi kontti koostuu yleensä yhdestä mikropalvelusta. Mikropalvelut ovat jaettuja kokonaisuuksia sovelluksesta. Kubernetes klusteri koostuu yhdestä tai useammasta mestarikoneesta, jotka toimivat klusterin ohjaamona. Ohjaamosta järjestelmänvalvoja kykenee hallitsemaan koko klusterin toimintaa ohjaamon rajapinnan kautta. Ohjaamon lisäksi klusterissa tulee olla vähintään kaksi (2) kappaletta kätyrikoneita, joihin kontit rakennetaan. Ohjaamo valvoo automaattisesti klusterin tilaa ja korjaa ongelmatilanteissa itse itsensä. AWS:n julkaisema Kubernetes palvelu on EKS. EKS -palvelu tarjoaa käyttäjälleen korkeakäyttävän ohjaamon. Käyttäjä joutuu itse luomaan kätyrit ja yhdistämään nämä palvelun klusteriin. EKS käyttää AWS:n omia resursseja hyödykseen tunnistautumisessa ja verkkoyhteyksissä. Käytännön osuudessa luodaan harjoitusympäristö käyttäen EKS -palvelua. Kaikki materiaalit, joita käytettiin harjoitusympäristön luonnissa ovat GitHub säilytyspaikassa. Kubernetes soveltuu käytettäväksi useamman projektin infrastruktuurina. Kubernetes ei sovellu tilallisten palvelujen ajoon, kuten tietokantojen. Kubernetes on tehokas työkalu, jonka suurena etuna on järjestelmän siirtäminen eri ympäristöjen välillä. Samanlainen Kubernetes ympäristö voidaan luoda omassa konesalissa, pilvessä tai hybridipilvessä. Kubernetes ei sido järjestelmää ollenkaan. EKS on ominaisuuksiltaan huono vaihtoehto kilpailijoihinsa nähden. EKS palvelua en suosittele käytettäväksi, ellei ole tarkoitus siirtää olemassa oleva Kubernetes järjestelmää AWS ympäristöön. |                                    |
+| **Asiasanat** Konttiorkestrointityökalu, Kubernetes, Infrastruktuuri, Mikropalvelu, Amazon Web Services, Pilvipalvelu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                    |
 
 Sisällys
 
 [1 Johdanto 1](#johdanto)
 
-[2 Lyhenteet, termit ja käännökset 2](#lyhenteet-termit-ja-käännökset)
+[1.1 Lyhenteet, termit ja käännökset 2](#lyhenteet-termit-ja-käännökset)
 
-[3 Kubernetes 3](#kubernetes)
+[2 Kubernetes 3](#kubernetes)
 
-[3.1 Kuberneteksen tausta 3](#kuberneteksen-tausta)
+[2.1 Kuberneteksen tausta 3](#kuberneteksen-tausta)
 
-[3.2 Kuberneteksen arkkitehtuuri 5](#kuberneteksen-arkkitehtuuri)
+[2.2 Kuberneteksen arkkitehtuuri 5](#kuberneteksen-arkkitehtuuri)
 
-[3.2.1 Master node 5](#master-node)
+[2.2.1 Master node 5](#master-node)
 
-[3.2.2 Pod 7](#pod)
+[2.2.2 Pod 7](#pod)
 
-[3.2.3 Service 7](#service)
+[2.2.3 Service 7](#service)
 
-[3.2.4 Minion node 9](#minion-node)
+[2.2.4 Minion node 9](#minion-node)
 
-[3.3 Kuberneteksen hyödyt 10](#kuberneteksen-hyödyt)
+[2.3 Kuberneteksen hyödyt 10](#kuberneteksen-hyödyt)
 
-[3.3.1 Nopeus 10](#nopeus)
+[2.3.1 Nopeus 10](#nopeus)
 
-[3.3.2 Skaalautuvuus 11](#skaalautuvuus)
+[2.3.2 Skaalautuvuus 11](#skaalautuvuus)
 
-[3.3.3 Infrastruktuurin abstrahointi 12](#infrastruktuurin-abstrahointi)
+[2.3.3 Infrastruktuurin abstrahointi 12](#infrastruktuurin-abstrahointi)
 
-[3.3.4 Tehokkuus 12](#tehokkuus)
+[2.3.4 Tehokkuus 12](#tehokkuus)
 
-[4 Amazon Elastic Container Service for Kubernetes
+[3 Amazon Elastic Container Service for Kubernetes
 13](#amazon-elastic-container-service-for-kubernetes)
 
-[4.1 AWS EKS tausta 13](#aws-eks-tausta)
+[3.1 AWS EKS tausta 13](#aws-eks-tausta)
 
-[4.2 EKS toiminta AWS ympäristössä 13](#eks-toiminta-aws-ympäristössä)
+[3.2 EKS toiminta AWS ympäristössä 13](#eks-toiminta-aws-ympäristössä)
 
-[4.3 Kilpailijat 15](#kilpailijat)
+[3.3 Kilpailijat 15](#kilpailijat)
 
-[5 Harjoitusympäristö 17](#harjoitusympäristö)
+[4 Harjoitusympäristö 17](#harjoitusympäristö)
 
-[5.1 Suunnitelma 17](#suunnitelma)
+[4.1 Suunnitelma 17](#suunnitelma)
 
-[5.2 Toteutus 17](#toteutus)
+[4.2 Toteutus 17](#toteutus)
 
-[5.2.1 Virtuaaliverkko 18](#virtuaaliverkko)
+[4.2.1 Virtuaaliverkko 18](#virtuaaliverkko)
 
-[5.2.2 EKS klusteri 19](#eks-klusteri)
+[4.2.2 EKS klusteri 19](#eks-klusteri)
 
-[5.2.3 Kätyrisolmut 21](#kätyrisolmut)
+[4.2.3 Kätyrisolmut 21](#kätyrisolmut)
 
-[5.2.4 Sovelluskontin rakentaminen 23](#sovelluskontin-rakentaminen)
+[4.2.4 Sovelluskontin rakentaminen 23](#sovelluskontin-rakentaminen)
 
-[5.2.5 Kuormantasaaja 23](#kuormantasaaja)
+[4.2.5 Kuormantasaaja 23](#kuormantasaaja)
 
-[5.2.6 Klusterin skaalautuminen 24](#klusterin-skaalautuminen)
+[4.2.6 Klusterin skaalautuminen 24](#klusterin-skaalautuminen)
 
-[6 Pohdinta 27](#pohdinta)
+[5 Pohdinta 27](#pohdinta)
 
-[6.1 EKS vahvuudet (ei vielä valmis) 27](#eks-vahvuudet-ei-vielä-valmis)
+[5.1 EKS vertailu 28](#eks-vertailu)
 
-[6.2 EKS heikkoudet (ei vielä valmis) 27](#eks-heikkoudet-ei-vielä-valmis)
+[5.1.1 EKS vahvuudet 28](#eks-vahvuudet)
 
-[Lähteet 28](#lähteet)
+[5.1.2 EKS heikkoudet 28](#eks-heikkoudet)
 
-[Liitteet 32](#liitteet)
+[Lähteet 29](#lähteet)
+
+[Liitteet 33](#liitteet)
 
 Johdanto
 ========
 
-Lyhenteet, termit ja käännökset
-===============================
+Konttisovelluksien suosio on kasvanut ohjelmistoalalla huomattavasti.
+Sovellukset pilkotaan pienemmiksi mikropalveluiksi. Mikropalveluista rakennetaan
+kontti, joita ajetaan eristyksessä toisistaan. Konttien hallintaan on kehitetty
+erilaisia konttiorkestrointityökaluja, joista tällä hetkellä suosituin on
+Kubernetes. Pilvipalveluntarjoajat kuten Amazon Web Services, Google Cloud ja
+Microsoft Azure ovat kehittäneet oman Kubernetes palvelunsa työkalun suuren
+suosion vuoksi.
 
->   **AKS** Azure Kubernetes Service  
->   **ASG** Auto Scaling Group
+Opinnäytetyön aiheena on Kubernetes ja AWS pilvipalvelun uusi EKS -palvelu. Työn
+tavoitteena on luoda hyvä yleisymmärrys Kubernetes työkalusta ja tämän
+toiminnasta. Opinnäytetyön toimeksiantajana toimii Webscale Oy. Webscale Oy on
+konsultointi yritys, joka erikoistuu ohjelmistotuotantoon ja AWS konsultointiin.
+Toimeksiantajaa kiinnostaa Kubernetes -työkalun lisäksi AWS pilvipalvelun uusi
+Kubernetes palvelu EKS. Toimeksiantaja haluaisi tietää mahdollisista hyödyistä
+ja haitoista, joita EKS palvelu toisi, mikäli tämän palvelun ottaisi
+projekteissa käyttöön. Opinnäytetyön aiheeksi valikoitui Kubernetes, koska
+haluan omakohtaisesti tutkia tätä konttiorkestrointityökalua ja oppia uuden
+tavan rakentaa infrastruktuuria konttisovelluksille.
+
+Opinnäytetyö jakautuu teoria- ja käytännönosuuksiin. Teoria osuudessa
+käsitellään Kubernetes konttiorkestrointityökalun yleisestä taustasta ja
+tarkemmin työkalun tärkeimpien komponenttien tehtäviä. Tämän lisäksi tutustutaan
+EKS palveluun yleisesti. Käytännönosuudessa tavoitteena on luoda toimiva
+harjoitusympäristö, jossa hyödynnetään EKS -palvelua. Harjoitusympäristön
+pääaiheena on ympäristön infrastruktuurin rakentaminen, eikä sinänsä
+ohjelmistotuotanto. Harjoitusympäristön sovelluksena käytetään olemassa olevaa
+sovellusta. Käytännönosuuden tavoitteena on saada kokemusta EKS -palvelusta,
+jotta tästä voi muodostaa oman mielipiteen hyödyistä ja haitoista.
+Harjoitusympäristön kaikki materiaalit julkaistaan GitHub säilytyspaikassa.
+Opinnäytetyön lopussa pohditaan työstä saatuja tuloksia.
+
+Opinnäytetyössä hyödynnetään erilaisia lähteitä. Lähteinä käytetään olemassa
+olevia tutkimuksia, kirjoja, virallisia dokumentaatioita ja artikkeleita.
+Opinnäytetyössä pyritään käyttämään monipuolisesti mahdollisimman tuoreita
+lähteitä.
+
+Lyhenteet, termit ja käännökset
+-------------------------------
+
+>   **AKS** Azure Kubernetes Service
 
 >   **AWS ECS** Amazon Elastic Container Service
 
@@ -110,7 +147,7 @@ Lyhenteet, termit ja käännökset
 
 >   **HA -klusteri** Korkeakäytettävyyden klusteri
 
->   **Isäntäkone** Host. Fyysinen tai virtuaalinenpalvelin
+>   **Isäntäkone** Host. Fyysinen tai virtuaalinen palvelin
 
 >   **K8s** Kubernetes
 
@@ -119,23 +156,18 @@ Lyhenteet, termit ja käännökset
 >   **Klusteri** Cluster. Joukko palvelimia, jotka muodostavat yhdessä
 >   järjestelmän
 
->   **Kontti** Container
-
 >   **Konttiorkestrointityökalu** Container orchestration tool
 
->   **Korkeankäytettävyys** Highly Available, HA
+>   **Korkeankäytettävyys** Highly Available. HA
 
 >   **kuormantasaaja** Loadbalancer
 
->   **Kätyrisolmu** Minion node
+>   **Solmu** Node Fyysinen- tai virtuaalinen kone, joka kykenee lähettämään ja
+>   vastaanottamaan tietoa.
 
->   **Mestari komponentti** Master components
+>   **Varanto** Pool. resurssi varasto
 
->   **Mestarisolmu** Master node
-
->   **Varanto** Pool, resurssi varasto
-
->   **VPC** Virtual private cloud, oma pilvi verkko
+>   **VPC** Virtual private cloud. Oma pilvi verkko
 
 <br>Kubernetes 
 ===============
@@ -531,21 +563,21 @@ Kubernetes palveluun.
 AWS EKS tausta
 --------------
 
-AWS avasi EKS palvelun asiakkailleen 2018 kesäkuussa. EKS palvelussa
+AWS avasi EKS -palvelun asiakkailleen 2018 kesäkuussa. EKS palvelussa
 järjestelmän vastuu jakautuu palveluntarjoajan AWS:n ja asiakkaan kanssa (kuva
 7). AWS takaa pilvipalveluntarjoajana laitteiston, ohjelmiston, verkkoyhteyden
 toimivuuden ja fyysisen turvauksen konesaleilla. Edellä mainittujen lisäksi AWS
-huolehtii EKS palvelussa K8s klusterin ohjaamon konfiguraatiosta ja
+huolehtii EKS -palvelussa K8s klusterin ohjaamon konfiguraatiosta ja
 toimivuudesta sekä etcd -tietokannan saatavuudesta. Mestareiden ja tietokannan
-saatavuuden takaamiseksi AWS ajaa mestarit usealla saatavuus alueella
-(availability zones, fyysesti eri paikoissa olevia konesaleja). Toiminta jatkuu
-tällä tavoin normaalisti, vaikka yksi saatavuus alueista putoaisi pois verkosta
-esimerkiksi sähkökatkoksen vuoksi. AWS tarkkailee myös jatkuvasti mestarisolmuja
-ja korvaa vialliset solmut uusilla. Asiakkaan vastuulla ovat K8s klusterin muu
-konfiguraatiot, esimerkiksi kätyrisolmun konfiguraatio, ohjaamon yhteys
-asiakkaan VPC -verkkoon. Asiakkaan vastuulla on myös kätyrisolmujen
-pystyttäminen, käyttöjärjestelmien valitseminen ja päivittäminen (Amazon Web
-Services, 2018a).
+saatavuuden takaamiseksi AWS ajaa useita mestareita usealla eri
+saatavuusalueella (availability zones, fyysesti eri paikoissa olevia
+konesaleja). Toiminta jatkuu tällä tavoin normaalisti, vaikka yksi
+saatavuusalueista putoaisi pois verkosta esimerkiksi sähkökatkoksen vuoksi. AWS
+tarkkailee myös jatkuvasti mestarisolmuja ja korvaa vialliset solmut uusilla.
+Asiakkaan vastuulla ovat K8s klusterin muut konfiguraatiot, esimerkiksi
+kätyrisolmun konfiguraatio, sekä ohjaamon yhteys asiakkaan VPC -verkkoon.
+Asiakkaan vastuulla on myös kätyrisolmujen pystyttäminen, käyttöjärjestelmien
+valitseminen ja päivittäminen (Amazon Web Services, 2018a).
 
 ![](media/13262e39b840152934b45ecbc5934b2c.png)
 
@@ -556,7 +588,7 @@ EKS toiminta AWS ympäristössä
 
 EKS palvelu toimii muiden AWS:n olemassa olevien palveluiden kanssa. Nämä
 palvelut tukevat ja parantavat EKS palvelun skaalautumista ja tietoturvaa. AWS
-palvelut, jotka toimivat suoraan EKS palvelun kanssa ovat: Elastic Load
+-palvelut, jotka toimivat suoraan EKS palvelun kanssa ovat: Elastic Load
 Balancing, IAM, VPC ja PrivateLink.
 
 *Elastic Load Balancing* (ELB) on AWS:n tarjoama kuormantasaajapalvelu. EKS
@@ -564,15 +596,16 @@ tukee kahden tyyppistä ELB kuormantasaajaa, Network Load Balancer (NLB) ja
 Classic Load Balancer (CLB). Oletuskuormantasaajatyyppi on CLB. NLB jakaa
 kuormaa hyödyntäen TCP tai TLS protokollaa. Kuormantasaajilla on oma IP-osoite,
 joka näkyy ulkoverkkoon. NLB:n ohjauksessa välittyy alkuperäisen kutsun tekijän
-IP osoite. Osoitetta voidaan hyödyntää tällöin myös sovelluksessa. Protokolla
-tason ohjauksen ansiosta NLB on erittäin nopea ja tehokas. Tämä
-kuormantasaajamalli on vielä alpha-vaiheessa, eikä suositella vielä K8s
-tuotantoklustereihin (Kubernetes, 2018c). CLB toimii samalla tavalla kuin
-palvelu-objekti jonka tyyppi on *LoadBalancer* (otsikko 2.2.3). (Bala 1.12.2017)
+IP osoite. Osoitetta voidaan hyödyntää tällöin myös sovelluksessa.
+Protokollatason ohjauksen ansiosta NLB on erittäin nopea ja tehokas. Tämä
+kuormantasaajamallin yhteensopivuus k8s:een on vielä alpha-vaiheessa, eikä
+suositella vielä k8s tuotantoklustereihin. CLB toimii samalla tavalla kuin
+palvelu-objekti jonka tyyppi on *LoadBalancer* (otsikko 2.2.3). (Bala 2017;
+Kubernetes, 2018c)
 
 *EKS* palvelu luo käyttäjän puolesta resursseja, joita hyödynnetään K8s
 klusterissa. EKS tarvitsee oikeudet näiden resurssien luontiin*. IAM* on AWS
-alustalla identiteetin ja pääsynhallinta -palvelu. Palvelun ideana on vastata
+alustalla identiteetin- ja pääsynhallinta -palvelu. Palvelun ideana on vastata
 kysymykseen: Kenellä on oikeus tehdä mitä ja missä? IAM palvelussa määritellään
 rooleja, käyttäjiä ja ryhmiä. Näihin objekteihin liitetään policy, jossa
 määritellään oikeuksista. AWS kertoo dokumentaatiossaan vähimmäisoikeudet EKS
@@ -583,7 +616,7 @@ sisälle luodaan pienempiä aliverkkoja. Aliverkot määritellään saatavuusalu
 ja ne voivat olla joko julkisia tai suljettuja verkkoja. Julkiseen aliverkkoon
 voidaan olla yhteydessä VPC -verkon ulkopuolelta. Suljettuun aliverkkoon ei
 voida olla yhteydessä verkon ulkopuolelta, mutta suljetusta aliverkosta voidaan
-ottaa yhteyttä VPC verkon ulkopuolelle. EKS vaatii klusterin luonnin yhteydessä
+ottaa yhteys VPC verkon ulkopuolelle. EKS vaatii klusterin luonnin yhteydessä
 vähintään kaksi aliverkkoa eri saatavuusalueilta. AWS suosittelee
 kuormantasaajan sijoittamista julkiselle aliverkolle ja kätyrisolmujen
 sijoittamista suljetulle aliverkolle (kuva 8). AWS luo EKS klusterin luonnin
@@ -593,9 +626,9 @@ mikäli klusterin oikeudet tämän sallivat. Klusterin ohjaamo käyttää ENI
 kätyrisolmut ottavat yhteyttä klusterin ohjaamon API palvelimelle
 kuormantasaajan kautta. Ohjaamon API palvelin voidaan muuttaa myös yksityiseksi.
 Tällöin yhteydet API palvelimeen menevät ENI resurssin kautta. Tämä vaatii
-ylläpitäjää luomaan VPC:n sisälle bastion -instanssin, jonka kautta ylläpitäjä
-voi ottaa yhteyttä klusterin ohjaamoon. Bastion -instanssi on virtuaalikone,
-joka näkyy ulkoverkkoon ja jolla on pääsy sisäverkkoon.
+ylläpitäjää luomaan VPC:n sisälle hyppypalvelimen, jonka kautta ylläpitäjä voi
+ottaa yhteyttä klusterin ohjaamoon. Hyppypalvelin on virtuaalikone, johon pääsee
+ulkoverkosta ja jolla on pääsy sisäverkkoon.
 
 ![](media/de36c1045505160d40a5f390d5081088.png)
 
@@ -620,8 +653,8 @@ Mutli-zonal -tilassa klusterilla on vain yksi mestarisolmu. Regional tilassa
 mestarisolmuja on useampi ja nämä on hajautettu eri saatavuusalueille. Googlella
 on K8s:ta eniten kokemusta ja Arundel, J & Domingus, J (2019) mukaan tämä näkyy
 heidän palvelussaan. He kertovat, että Google on paras K8s palveluntarjoaja,
-joka on tehnyt K8s käyttöönoton nopeaksi, edulliseksi ja yksinkertaiseksi heidän
-tarjoamien työkalujen ansiosta.
+joka on myös tehnyt K8s käyttöönoton nopeaksi, edulliseksi ja yksinkertaiseksi
+heidän tarjoamien työkalujen ansiosta.
 
 *AKS* tarjoaa GKE tapaan täysin hallitun K8s palvelun. Microsoft Azure ylläpitää
 ja hoitaa mestarisolmujen ja kätyrisolmujen tietoturvapäivitykset. AKS, GKE ja
@@ -653,14 +686,15 @@ verkkosivu, joka palauttaa kontin nimen, jossa sovellusta pidetään ajossa.
 Suunnitelma
 -----------
 
-Harjoituksen pääpainona on sovelluksen arkkitehtuuri. Koko sovellusta ajetaan
+Harjoituksen pääpainona on sovelluksen arkkitehtuuri. Sovellusta ajetaan
 konteissa. Kontteja ajetaan useita vierekkäin eristettyinä toisistaan ja näitä
 hallitaan AWS EKS palvelun avulla. Sovellukselle luodaan oma VPC -verkko.
 Virtuaaliverkko tulee pitämään sisällään kaksi julkista aliverkkoa ja kaksi
-suljettua aliverkkoa. Julkisissa aliverkoissa tulee olemaan kuormantasaaja.
-Suljetuissa aliverkoissa tulee olemaan kummassakin oma pilvipalvelin.
-Sovelluksen verkkorakenne on samanlainen kuin kuvassa 8. Suljetun aliverkon
-pilvipalvelimet yhdistetään AWS EKS palvelun K8s klusteriin.
+suljettua aliverkkoa. Aliverkot sijaitsevat kahdessa eri saatavuusalueilla.
+Julkisissa aliverkoissa tulee olemaan kuormantasaaja. Suljetuissa aliverkoissa
+tulee olemaan kummassakin oma pilvipalvelin. Sovelluksen verkkorakenne on
+samanlainen kuin kuvassa 8. Suljetun aliverkon pilvipalvelimet yhdistetään AWS
+EKS palvelun K8s klusteriin.
 
 Toteutus
 --------
@@ -671,25 +705,25 @@ toteutuksessa käytetyt koodit ja mallitiedostot löytyvät GitHub säilytyspaik
 AWS CloudFormation -palvelulla. CloudFormation on palvelu, joka luo AWS
 resurssit automaattisesti. Palvelulle lähetetään YAML tai JSON mallitiedosto.
 Tiedostossa tulee kuvailla minkälaisia AWS resursseja halutaan ja miten nämä
-ovat mahdollisesti konfiguroitu. Tämä mahdollistaa ympäristöjen monistaminen
+ovat mahdollisesti konfiguroitu. Tämä mahdollistaa ympäristöjen monistamisen
 automaattisesti ja nopeasti. Mallitiedostot voidaan myös säilyttää
-versiohallinta järjestelmässä, kuten GitHub säilytyspaikassa. CloudFormation
-mallitiedostot tulee noudattaa AWS:n omaa dokumentaatiota (Amazon Web Services,
-s.a (c)).
+versiohallintajärjestelmässä, kuten GitHub säilytyspaikassa. CloudFormation
+mallitiedostojen tulee noudattaa AWS:n omaa dokumentaatiota (Amazon Web
+Services, s.a (c)).
 
-AWS CloudFormation palvelun kanssa tullaan käyttämään Sceptre työkalua. Sceptre
-helpottaa CloudFormation mallien hallintaa ja tarjoaa hyvät työkalut
+AWS CloudFormation -palvelun kanssa tullaan käyttämään Sceptre -työkalua.
+Sceptre helpottaa CloudFormation -mallien hallintaa ja tarjoaa hyvät työkalut
 ympäristöjen luomiseen nopeasti. Muita ohjelmia, joita hyödynnetään
-harjoitusympäristössä, on AWS CLI ja kubectl. AWS CLI tarjoaa komentoriviltä
-kommunikoinnin AWS ympäristöön. Kubectl on komentorivi työkalu, jonka avulla
+harjoitusympäristössä, ovat AWS CLI ja kubectl. AWS CLI tarjoaa komentoriviltä
+kommunikoinnin AWS ympäristöön. Kubectl on komentorivityökalu, jonka avulla
 kommunikoidaan K8s klusterin ohjaamon kanssa. Kaikki K8s konfiguraatiotiedostot
-on YAML muodossa harjoituksessa. Kaikki konfiguraatio tiedostot lähetetään
+on YAML muodossa harjoituksessa. Kaikki konfiguraatiotiedostot lähetetään
 ohjaamoon kubectl komennolla kubectl apply -f \<tiedoston nimi\>.
 
 ### Virtuaaliverkko
 
 Harjoitusympäristölle luodaan VPC -verkko. Verkko pitää sisällään kaksi julkista
-aliverkkoa ja kaksi suljettua. VPC -verkon luomista varten luodaan
+aliverkkoa ja kaksi suljettua aliverkkoa. VPC -verkon luomista varten luodaan
 CloudFormation mallitiedosto. Mallitiedosto aloitetaan ilmoittamalla mitä AWS
 formaatti versiota käytetään (Kuva 9). Harjoituksessa käytetään uusinta
 versiota, eli 2010-09-09. Parameters: -otsikon alle kuvaillaan minkä nimisiä
@@ -698,8 +732,8 @@ muuttujia Project ja CidrBlock. Project muuttujan arvoksi tulee projektin nimi.
 CidrBlock muuttujaa käytetään mallitiedoston ensimmäisessä resurssissa Vpc, joka
 on tyyppiä AWS::EC2::VPC. Yksi AWS::EC2::VPC -tyyppisten resurssien vaadituista
 arvoista on CidrBlock. Tämän arvo määrittelee koko VPC -verkon CIDR-notaation ja
-samalla verkon IP avaruuden. Esimerkiksi arvo 10.20.0.0/16, rajaisi VPC-verkon
-IP osoitteet 10.20.0.0 – 10.20.255.255 sisälle (Amazon Web Services, s.a (d)).
+samalla verkon IP avaruuden. Esimerkiksi arvo 10.20.0.0/16 rajaisi VPC-verkon IP
+osoitteet 10.20.0.0 – 10.20.255.255 sisälle (Amazon Web Services, s.a (d)).
 
 ![](media/b798a4a1563e62636edc6db9a9c187de.png)
 
@@ -757,41 +791,42 @@ tietoa klusterista, mikäli yhteys toimii.
 
 Kätyreitä luodessa tulee pitää mielessä tietoturva. Vaikka kätyrit luodaan VPC
 -verkon suljettuun aliverkkoon, on hyvä käytäntö luoda securitygroup -resurssi.
-Tällä resurssilla voidaan määritellä mistä voidaan ottaa yhteyttä
+Tällä resurssilla voidaan määritellä, mistä voidaan ottaa yhteyttä
 kätyrisolmuihin ja mihin portteihin yhteydenotto sallitaan. Kuvassa 12 luodaan
-kaksi resurssia. Molemmat resurssit lisäävät säännön securitygroup -resurssiin.
-AWS::EC2::SecurityGroupIngress -tyyppinen resurssi luo säännön tulevasta
-liikenteestä. Vastaavasti AWS::EC2::SecurityGroupEgress luo säännön lähtevästä
-liikenteestä. Mikäli lähtevä tai tuleva yhteys ei ole sääntöjen mukainen,
-tiputetaan tämä pois ja yhteys ei koskaan pääse perille asti. GroupId
+kaksi resurssia. Molemmat resurssit lisäävät säännön securitygroup -resurssin
+sisälle. AWS::EC2::SecurityGroupIngress -tyyppinen resurssi luo säännön
+tulevasta liikenteestä. Vastaavasti AWS::EC2::SecurityGroupEgress luo säännön
+ulos lähtevästä liikenteestä. Mikäli lähtevä tai tuleva yhteys ei ole sääntöjen
+mukainen, tiputetaan tämä pois ja yhteys ei koskaan pääse perille asti. GroupId
 määrittelee resursseissa mitä securitygroup -resurssia sääntö koskee.
-Resursseissa tulee määritellä mistä porteista liikenne sallitaan tai mihin
+Resursseissa tulee määritellä, mistä porteista liikenne sallitaan tai mihin
 porttiin yhteys voi mennä määränpäässä. Harjoitusympäristössä sallitaan yhteys
 kätyreistä ohjaamoon porteista 1025 – 65535 ja 443. AWS dokumentaatio
-suosittelee käyttämään näitä portteja (Amazon Web Services, s.a (e)). Tässä
-vaiheessa ei tarvitse vielä ajatella järjestelmävalvojan pääsystä ohjaamoon.
+suosittelee käyttämään näitä portteja (Amazon Web Services, s.a (e)).
+Securitygroup -resurssiin ei tarvitse määritellä sääntöä järjestelmänvalvojan
+pääsystä ohjaamoon.
 
 ![](media/2578872ef8ead23af0c9da0b1de9807a.png)
 
 Kuva 12. SecurityGroup sääntöjen määrittely mallitiedostossa
 
 Kätyreitä voidaan luoda EKS klusteriin käsin, mutta tämä ei ole suositeltavaa
-tuotanto käytössä. Tämä lisää riskiä inhimillisille virheille ja vaikeuttaa
+tuotantokäytössä. Tämä lisää riskiä inhimillisille virheille ja vaikeuttaa
 klusterin skaalautumista nopeasti. AWS ympäristössä on mahdollista ryhmittää
 pilvipalvelininstanssit yhdeksi ryhmäksi Auto Scaling Group:illa (lyh. ASG).
 ASG:ssa voidaan määrittää instansseihin liittyviä konfiguraatioita, kuten
 minkälaisia instansseja halutaan, kuinka monta pilvipalvelininstanssia voi olla
 samanaikaisesti päällä ja kuinka monta voi olla vähimmillään. Tämän lisäksi ASG
-konfiguraatioon voidaan lisätä bash -scripti, joka ajetaan aina kun instanssi
+konfiguraatioon voidaan lisätä komentosarja, joka ajetaan aina kun instanssi
 luodaan. Jokainen ASG:n luoma instanssi on käynnistyessä samanlaisia. Jokainen
 instanssin saa saman IAM roolin, joka määrittelee mitä oikeuksia instansseilla
 on.
 
-Harjoituksessa ASG käynnistää kaksi (2) instanssia heti ja ajaa kummassakin bash
--scriptin. Kyseinen bash -scripti käynnistää kubelet -komponentin, joka yrittää
+Harjoituksessa ASG käynnistää kaksi (2) instanssia heti ja ajaa kummassakin
+komentosarjan. Komentosarja käynnistää kubelet -komponentin, joka yrittää
 jatkuvasti ottaa yhteyttä klusterin ohjaamoon. Yhteydenotto ei onnistu ennen
 kuin ohjaamolle ilmoitetaan mitä IAM roolia instanssit käyttävät. Tiedon
-ilmoittaminen ohjaamolle tapahtuu konfiguraatiotiedostolla (Kuva 13).
+ilmoittaminen ohjaamolle tapahtuu k8s konfiguraatiotiedostolla (Kuva 13).
 Tiedostossa tulee vain korvata rolearn arvoksi instanssien IAM rooli tunnus
 (Amazon Web Services, s.a (f)).
 
@@ -830,15 +865,15 @@ Kuva 15. Harjoitussovelluksen deployment konfiguraatio
 
 Vaikka sovellus on luotu harjoitusympäristöön, ei voida siihen ottaa yhteyttä
 klusterin ulkopuolelta. Harjoitussovellus tarvitsee palvelu-objektin, jotta
-tähän voi ottaa yhteyttä klusterin ulkopuolelta. Kappaleessa [3.2.3
+tähän voi ottaa yhteyttä klusterin ulkopuolelta. Kappaleessa [2.2.3
 Service](#service) käydään läpi erilaisia palvelu-objektin tyyppejä. Yksi
-mainituista tyypeistä on *LoadBalancer*. Harjoitusympäristössä käytetään
-kyseistä tyyppiä. EKS luo automaattisesti LoadBalancer tyyppisen
-palvelu-objektin julkiselle aliverkolle. Mikäli EKS ei löydä yhtään julkista
-aliverkkoa klusterin verkosta, palauttaa tämä virhe ilmoituksen. Palvelu-objekti
-luodaan K8s konfiguraatiotiedostolla. Konfiguraatiotiedostoon tulee määritellä
-minkä nimiselle sovellukselle palvelu-objektia luodaan, mitä protokollaa
-käytetään ja mikä portti avataan ulkoverkkoon.
+mainituista tyypeistä on LoadBalancer. Harjoitusympäristössä käytetään kyseistä
+tyyppiä. EKS luo automaattisesti LoadBalancer tyyppisen palvelu-objektin
+julkiselle aliverkolle. Mikäli EKS ei löydä yhtään julkista aliverkkoa klusterin
+verkosta, palauttaa tämä virhe ilmoituksen. Palvelu-objekti luodaan K8s
+konfiguraatiotiedostolla. Konfiguraatiotiedostoon tulee määritellä minkä
+nimiselle sovellukselle palvelu-objektia luodaan, mitä protokollaa käytetään ja
+mikä portti avataan ulkoverkkoon.
 
 Harjoitusympäristössä sovellus on HTTP -sivusto, joten portti 80 avataan
 palvelu-objektissa ulkoverkkoon.
@@ -849,9 +884,9 @@ sovellukseen. Kun osoitetta haetaan selaimesta, avautuu sovelluksen sivusto
 (Kuva 16). Koska kuormantasaaja ohjaa liikenteen eri konteille, palautuu
 sivuston mukana eri konttien nimet, vaikka DNS osoite on sama.
 
-![](media/692cde9cf587abaf12c3b0ceca6dfe78.png)
+![A screenshot of a cell phone Description automatically generated](media/692cde9cf587abaf12c3b0ceca6dfe78.png)
 
-![](media/14442a73bb3b947d48e137778826bf4d.png)
+![A screenshot of a cell phone Description automatically generated](media/14442a73bb3b947d48e137778826bf4d.png)
 
 Kuva 16. Harjoitussovelluksen avaaminen selaimella
 
@@ -863,14 +898,14 @@ klusterin kätyrisolmujen määrää
 Konfiguraatiotiedoston lopussa on command -kenttä, jossa määritellään
 parametreja klusterin automaatti skaalaamiselle (Kuva 17). Viimeinen rivi
 kyseisessä kentässä määrittelee automaatti skaalaamisen rajat ja mitä ASG
-resurssia käytetään. Järjestelmävalvojan ei tarvitse konfiguraatio tiedostossa
-muita arvoja muuttaa, kuin command -kentän viimeisen parametrin arvot.
+resurssia käytetään. Järjestelmävalvojan ei tarvitse konfiguraatiotiedostossa
+muuttaa muita arvoja kuin command -kentän viimeisen parametrin arvot.
 
 ![](media/7fc7955fbb71ed0a79f6bf6a084fee44.png)
 
-Kuva 17. Automaatti skaalaamisen parametrit
+Kuva 17. Auto skaalaamisen parametrit
 
-command -kentän viimeinen parametri selitettynä:
+command -kentän viimeinen parametri selitettynä (Kuva 17):
 
 -   Punainen
 
@@ -888,28 +923,28 @@ command -kentän viimeinen parametri selitettynä:
 
     -   ASG resurssin nimi
 
-Konfiguraatiotiedostossa luodaan yhden replikan sovellus nimeltä
-*cluster-autoscaler.* Sovellukselle annetaan konfiguraatiotiedostossa lupa
+Harjoitusympäristössä luodaan yhden kopion sovellus nimeltä
+*cluster-autoscaler*. Sovellukselle annetaan konfiguraatiotiedostossa lupa
 käyttää ohjaamon rajapintaa hyödyksi, jotta tämä saisi tarvittavat tiedot
 kätyrisolmuista ja muista sovelluksista klusterissa. Näiden tietojen perusteella
 sovellus skaalaa klusteria ylöspäin ja alaspäin automaattisesti hyödyntäen
-kätyrisolmujen ASG:ta. *Cluster-autoscaler* -sovellusta ajetaan normaalisti
+kätyrisolmujen ASG:ta. Cluster-autoscaler -sovellusta ajetaan normaalisti
 kätyrisolmuissa. Tämä tarkoittaa, sitä että kätyrisolmun IAM rooleissa tulee
-olla oikeus hallinnoida ASG:tä.
+olla oikeus hallinnoida
+
+ASG:tä.
 
 Kun konfiguraatiotiedosto on lähetetty klusterin ohjaamolle, voidaan
-harjoitussovelluksen replikaatioiden määrää nostaa. Replikaatioiden määrän
-nostaminen tapahtuu kappaleessa [5.2.4](#sovelluskontin-rakentaminen) luodun
-deployment konfiguraatiotiedoston replicas arvoa muuttamalla.
-
-Pian replikaatio määrän nostamisen jälkeen voidaan huomata, että uusien
-kapseleiden luominen pysähtyy (Kuva 18). K8s klusterin ohjaamo jää odottamaan
-vapautuvia resursseja tai uusia kätyrisolmuja, johon jonossa olevat kapselit
-voidaan sijoittaa.
+harjoitussovelluksen kopioiden määrää nostaa. Kopioiden määrän nostaminen
+tapahtuu kappaleessa [4.2.4](#sovelluskontin-rakentaminen) luodun deployment
+konfiguraatiotiedoston replicas arvoa muuttamalla. Pian kopioiden määrän
+nostamisen jälkeen voidaan huomata, että uusien kapseleiden luominen pysähtyy
+(Kuva 18). K8s klusterin ohjaamo jää odottamaan vapautuvia resursseja tai uusia
+kätyrisolmuja, joihin jonossa olevat kapselit voidaan sijoittaa.
 
 ![](media/99f81c0dc7a03cca3285b680bfce0a1c.png)
 
-Kuva 18. Harjoitussovelluksen replikaatio jono
+Kuva 18. Harjoitussovelluksen replikaatiojono
 
 *Cluster-autoscaler* -sovellus huomaa, että klusterin ohjaamolle on muodostunut
 jono. Sovellus skaalaa automaattisesti ASG ryhmää ylöspäin ja luo samalla
@@ -919,56 +954,92 @@ alkuperäisen kahden (2) instanssin avuksi. Kaikki viisikymmentä kapselia on
 luotu kätyrisolmuihin ja jokaiseen kapseliin on mahdollista ottaa yhteys
 kuormantasaajan kautta.
 
-![](media/50838cccfea975001376a651cdec561d.png)
+![A screenshot of a cell phone Description automatically generated](media/50838cccfea975001376a651cdec561d.png)
 
 ![](media/45bd8e72f377d7a8cdf2eea6de741199.png)
 
-Kuva 19. Klusterin tila automaatti skaalaamisen jälkeen
+Kuva 19. Klusterin tila auto skaalaamisen jälkeen
 
-*Cluster-autoscaler* -sovellus skaalaa klusteria alaspäin myös automaattisesti.
+*Cluster-autoscaler* -sovellus skaalaa klusteria automaattisesti myös alaspäin.
 Tämä tunnistaa kätyrisolmut, joissa ei ole kapseleita ajossa. Sovellus odottaa
 noin kymmenen (10) minuuttia ennen kuin sammuttaa instanssin.
 
 Pohdinta
 ========
 
-EKS vahvuudet (ei vielä valmis)
--------------------------------
+K8s ympäristö on tarkoitettu sovelluksille, jotka ovat tilattomia. Tilalliset
+sovellukset kuten tietokannat, eivät sovellu k8s ympäristöön. Tilalliset
+sovellukset menettävät muistissa olevat datat, kun sovelluksen kontti tuhotaan.
+K8s on todella hyvä konttiorkestrointityökalu usean projektin infrastruktuuria,
+joissa on useita eri mikropalveluita. Yhtä k8s klusteria on tarkoitus käyttää
+yhteisenä infrastruktuurina useammalle projekteille. Järjestelmä kykenee
+ylläpitämään toiminnallisuutensa automaattisesti ja vikatilanteissa kykenee
+korjaamaan itse itsensä. Yksinkertaisen k8s klusterin luominen pilvipalvelussa
+on yksinkertaista AWS EKS palvelun ja olemassa olevien konfiguraatiotiedostojen
+avulla. Klusterin muuttaminen erikoistilanteissa vastaamaan omia tarpeita ja
+vaatimuksia saattaa kuitenkin olla hankalaa. Monimutkaisen
+konfiguraationtiedoston luominen vaatii laajaa k8s konseptien ja käsitteiden
+tuntemusta.
 
--   EKS tarjoaa paljon hallintaa kätyrisolmuihin.
+AWS EKS on hyvä alku k8s palvelulle. Tämä on kuitenkin ominaisuuksiltaan yksi
+heikoimmista palveluista, kun verrataan muihin pilvipalvelutarjoajien k8s
+palveluihin (Liite 1). EKS palvelun käyttäjälle jää kokonaan kätyrisolmujen
+ylläpitäminen ja k8s klusteriin yhdistäminen. Tämä on hidasta ja aikaa vievää
+työtä, jota ei tarvitse huolehtia kilpailijoiden vastaavissa palveluissa.
+Googlen ja Microsoftin k8s palveluissa k8s klusterin ja kätyreiden luominen on
+täysin automatisoitu. Palvelut liittävät luodut kätyrisolmut automaattisesti
+klusteriin ja ylläpitävät kätyreitä ylläpitäjän puolesta. Samankaltaiseen
+lopputulokseen voitaisiin päästä, mikäli AWS tuo heidän ECS
+konttihallintapalvelusta tutun Fargate -ominaisuuden EKS palveluun. Fargate
+ominaisuuden avulla ECS palvelun käyttäjät kykenevät ajamaan konttisovelluksia
+ECS palvelussa ilman että heidän tulee luoda konteille pilvipalvelimia. Fargate
+allokoi automaattisesti konteille pilvipalvelimet käyttäjän puolesta, eikä
+käyttäjän tarvitse tämän takia huolehtia pilvipalvelimista ollenkaan. Mikäli
+Fargate ominaisuus saadaan toteutettua EKS palveluun, parantaisi tämä palvellun
+kilpailuasemaa kilpailijoihinsa nähden huomattavasti.
 
--   mestarit ovat HA
+Toistaiseksi en näe EKS -palvelussa suurta etua ECS -palveluun nähden. Mikäli
+olemassa oleva k8s projekti halutaan migratoida AWS ympäristöön on EKS -palvelu
+siihen loistava ratkaisu. En näe muita syitä aloittaa projektia hyödyntäen EKS
+-palvelua. Olen samaa mieltä Arundelin ja Dominguksen (2019) kanssa. Mikäli
+halutaan aloittaa uusi projekti hyödyntäen k8s konttiorkestrointityökalua,
+suosittelen käyttämään GKE -palvelua. Heidän palvelussaan on toistaiseksi eniten
+ominaisuuksia ja k8s klusterin luonti on tehty nopeaksi ja helpoksi.
+
+EKS vertailu
+------------
+
+Kappaleessa tuodaan esille mielestäni EKS palvelun suurimmat vahvuudet ja
+suurimmat heikkoudet.
+
+### EKS vahvuudet
+
+-   EKS antaa paljon hallintaa kätyrisolmuihin
+
+-   Mestarit ovat HA
 
     -   Kannustaa jakamaan kätyrit usealle saatavuusalueelle
 
 -   Toimii hyvin muiden AWS resurssien kanssa
 
--   mukautettava VPC ympäristö
+-   Klusterissa on mahdollista olla erilaisia kätyrisolmuja
 
--   Klusterissa mahdollista erilaisia kätyrisolmuja
+### EKS heikkoudet
 
-EKS on hyvä palvelu, mikäli haluaa paljon hallintaa omassa ympäristössään.
+-   AWS käyttäjille enintään 3 klusteria / tili
 
-EKS heikkoudet (ei vielä valmis)
---------------------------------
-
--   AWS käyttäjille max 3 klusteria / tili (mahdollista pyytää lisää ottamalla
-    yhteyttä)
+    -   Mahdollista pyytää lisää AWS supportin kautta
 
 -   Mestari maksaa (\$0.20 / 1h)
 
     -   Muu infrastruktuuri klusterissa maksaa myös
 
--   Enemmänkin ”master as a service”
+-   ”master as a service”
 
-    -   Kätyrisolmut tulee käyttäjän luoda itse ja liittämään klusteriin
+    -   Kätyrisolmut tulee käyttäjän luoda itse ja liittää klusteriin
 
-    -   Kätyreiden tietoturvapäivitykset ja autoscaling on myös käyttäjän
+    -   Kätyreiden tietoturvapäivitykset ja skaalautuvuus on myös käyttäjän
         vastuulla
-
--   Liikaa hallintaa (?)
-
--   DIY ratkaisu KOPS parempi (?)
 
 <br>Lähteet
 ===========
@@ -978,7 +1049,7 @@ EKS heikkoudet (ei vielä valmis)
 >   19.3.2019
 
 >   Ali, S. 2018. Kubernetes Design and Development Explained. Luettavissa:
->   <https://thenewstack.io/kubernetes-design-and-development-explained/>.
+>   [https://thenewstack.io/Kubernetes-design-and-development-explained/](https://thenewstack.io/kubernetes-design-and-development-explained/).
 >   Luettu: 18.2.2019
 
 >   Amazon Web Services, 2018a. Amazon EKS – Now Generally Available.
@@ -1027,68 +1098,70 @@ EKS heikkoudet (ei vielä valmis)
 >   Vegas. Nähtävissä: <https://youtu.be/vrYLrx-a_Wg>
 
 >   DigitalOcean, 2018. Kubernetes Overview. Luettavissa:
->   <https://www.digitalocean.com/docs/kubernetes/overview/>. Luettu 20.3.2019
+>   [https://www.digitalocean.com/docs/Kubernetes/overview/](https://www.digitalocean.com/docs/kubernetes/overview/).
+>   Luettu 20.3.2019
 
 >   Docker, s.a. What is Container. Luettavissa:
 >   <https://www.docker.com/resources/what-container>. Luettu: 12.01.2019
 
 >   Gupta, A. 2017. Why is Kubernetes so popular? Luettavissa:
->   <https://opensource.com/article/17/10/why-kubernetes-so-popular>. Luettu:
->   19.01.2019
+>   [https://opensource.com/article/17/10/why-Kubernetes-so-popular](https://opensource.com/article/17/10/why-kubernetes-so-popular).
+>   Luettu: 19.01.2019
 
 >   Haider, H. 2019. DigitalOcean Managed Kubernetes: An Interview with the
 >   Experts. Luettavissa:
->   [https://www.replex.io/blog/digitalocean-managed-kubernetes-an-interview-with-the-experts.
+>   [https://www.replex.io/blog/digitalocean-managed-Kubernetes-an-interview-with-the-experts.
 >   Luettu
 >   20.3.2019](https://www.replex.io/blog/digitalocean-managed-kubernetes-an-interview-with-the-experts.%20Luettu%2020.3.2019)
 
 >   Hakkarainen, P. 2018. Docker, Kubernetes, SUSE CaaS Platform – musiikkia
 >   kontilleni. Luettavissa:
->   <https://susesuomi.fi/ajankohtaista/uutiset/3/10/2018/docker-kubernetes-suse-caas-platform-musiikkia-kontilleni/>.
+>   [https://susesuomi.fi/ajankohtaista/uutiset/3/10/2018/docker-Kubernetes-suse-caas-platform-musiikkia-kontilleni/](https://susesuomi.fi/ajankohtaista/uutiset/3/10/2018/docker-kubernetes-suse-caas-platform-musiikkia-kontilleni/).
 >   Luettu: 12.01.2019
 
 >   Hightower, K., Burns, B. & Beda, J. 2017. Kubernetes Up & Running. O’Reilly
 >   Media, Inc. Sebastopol
 
 >   Jayanandana, N. 2018. Benefits of Kubernetes. Luettavissa:
->   <https://medium.com/platformer-blog/benefits-of-kubernetes-e6d5de39bc48>.
+>   [https://medium.com/platformer-blog/benefits-of-Kubernetes-e6d5de39bc48](https://medium.com/platformer-blog/benefits-of-kubernetes-e6d5de39bc48).
 >   Luettu: 22.2.2019
 
 >   Kubernetes 2018a. What is Kubernetes? Luettavissa:
->   <https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/>. Luettu:
->   12.01.2019
+>   [https://Kubernetes.io/docs/concepts/overview/what-is-Kubernetes/](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/).
+>   Luettu: 12.01.2019
 
 >   Kubernetes, 2018b. Resizing a cluster. Luettavissa:
->   <https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/>.
+>   [https://Kubernetes.io/docs/tasks/administer-cluster/cluster-management/](https://kubernetes.io/docs/tasks/administer-cluster/cluster-management/).
 >   Luettu 20.2.2019
 
 >   Kubernetes, 2018c. Services. Luettavissa:
->   <https://kubernetes.io/docs/concepts/services-networking/service/>. Luettu
->   20.2.2019
+>   [https://Kubernetes.io/docs/concepts/services-networking/service/](https://kubernetes.io/docs/concepts/services-networking/service/).
+>   Luettu 20.2.2019
 
 >   Kubernetes, 2018d. Running Multiple Instances of Your App. Luettavissa:
->   <https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/>.
+>   [https://Kubernetes.io/docs/tutorials/Kubernetes-basics/scale/scale-intro/](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/).
 >   Luettu 20.2.2019
 
 >   Kubernetes, 2019a. Kubernetes Components. Luettavissa:
->   <https://kubernetes.io/docs/concepts/overview/components/>. Luettu: 9.2.2019
+>   [https://Kubernetes.io/docs/concepts/overview/components/](https://kubernetes.io/docs/concepts/overview/components/).
+>   Luettu: 9.2.2019
 
 >   Kubernetes, 2019b. Options for Highly Available Topology. Luettavissa:
->   <https://kubernetes.io/docs/setup/independent/ha-topology/#what-s-next>.
+>   [https://Kubernetes.io/docs/setup/independent/ha-topology/\#what-s-next](https://kubernetes.io/docs/setup/independent/ha-topology/#what-s-next).
 >   Luettu: 2.2.2019
 
 >   Kubernetes, 2019c. Pod Lifecycle. Luettavissa:
->   <https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/>. Luettu:
->   20.2.2019
+>   [https://Kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/).
+>   Luettu: 20.2.2019
 
 >   Kublr, 2017. Under the Hood: An Introduction to Kubernetes Acrhitecture.
 >   Luettavissa:
->   <https://kublr.com/blog/under-the-hood-an-introduction-to-kubernetes-architecture/>.
+>   [https://kublr.com/blog/under-the-hood-an-introduction-to-Kubernetes-architecture/](https://kublr.com/blog/under-the-hood-an-introduction-to-kubernetes-architecture/).
 >   Luettu: 9.2.2019
 
 >   Lardinois, F. 2015. As Kubernetes Hits 1.0, Google Donates Technology To
 >   Newly Formed Cloud Native Computing Foundation. Luettavissa:
->   <https://techcrunch.com/2015/07/21/as-kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/>.
+>   [https://techcrunch.com/2015/07/21/as-Kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/](https://techcrunch.com/2015/07/21/as-kubernetes-hits-1-0-google-donates-technology-to-newly-formed-cloud-native-computing-foundation-with-ibm-intel-twitter-and-others/).
 >   Luettu: 19.01.2019
 
 >   Microsoft Azure, 2019. Kubernetes core concepts for Azure Kubernetes Service
@@ -1100,7 +1173,7 @@ EKS heikkoudet (ei vielä valmis)
 >   Architecture. O’Reilly Media, Inc. Sebastopol
 
 >   Openstack, 2018. How to run a Kubernetes cluster in OpenStack. Luettavissa:
->   <https://superuser.openstack.org/articles/how-to-run-a-kubernetes-cluster-in-openstack/>.
+>   [https://superuser.openstack.org/articles/how-to-run-a-Kubernetes-cluster-in-openstack/](https://superuser.openstack.org/articles/how-to-run-a-kubernetes-cluster-in-openstack/).
 >   Luettu 19.3.2019
 
 >   Paraiso, F., Challita, S., Al-Dhuraibi, Y. & Merle P. 2016. Model-Driven
@@ -1108,7 +1181,7 @@ EKS heikkoudet (ei vielä valmis)
 
 >   Ravindra, S. 2018. Kubernetes vs. Docker Swarm: What’s the Difference?
 >   Luettavissa:
->   <https://thenewstack.io/kubernetes-vs-docker-swarm-whats-the-difference/>.
+>   [https://thenewstack.io/Kubernetes-vs-docker-swarm-whats-the-difference/](https://thenewstack.io/kubernetes-vs-docker-swarm-whats-the-difference/).
 >   Luettu 21.3.2019
 
 >   Rize, L. 2017. Container Image Immutability and the Power of Metadata.
@@ -1118,13 +1191,13 @@ EKS heikkoudet (ei vielä valmis)
 
 >   Sandeep, D. 2018. Kubernetes NodePort vs LoadBalancer vs Ingress? When
 >   should I use what? Luettavissa:
->   <https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0>.
+>   [https://medium.com/google-cloud/Kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0).
 >   Luettu 21.3.2019
 
 >   Sanders, S. 2018. How Kubernetes improves IT’s operational efficency.
 >   Luettavissa:
->   <https://jaxenter.com/kubernetes-improves-efficiency-147699.html>. Luettu:
->   23.2.2019
+>   [https://jaxenter.com/Kubernetes-improves-efficiency-147699.html](https://jaxenter.com/kubernetes-improves-efficiency-147699.html).
+>   Luettu: 23.2.2019
 
 >   Sarkar, A & Shah, A. 2018. Learning AWS second Edition. Packt Publishing
 >   Ltd. Birmingham
@@ -1136,7 +1209,7 @@ EKS heikkoudet (ei vielä valmis)
 
 >   Yegulalp, S. 2019. What is Kubernetes? Container orchestration explained.
 >   Luettavissa:
->   [https://www.infoworld.com/article/3268073/kubernetes/what-is-kubernetes-container-orchestration-explained.html](https://www.infoworld.com/article/3268073/kubernetes/what-is-kubernetes-container-orchestration-explained.html.).
+>   [https://www.infoworld.com/article/3268073/Kubernetes/what-is-Kubernetes-container-orchestration-explained.html](https://www.infoworld.com/article/3268073/kubernetes/what-is-kubernetes-container-orchestration-explained.html.).
 >   Luettu: 31.01.2019
 
 Liitteet
@@ -1145,5 +1218,3 @@ Liitteet
 ![](media/bb1df4f70a3f1f9ef013928e08a7fd4a.png)
 
 **Liite 1. GKE, AKS, EKS vertailu taulu (Acreman, S. s.a.)**
-
-![](media/ed3c1c40b68ba4f40db15529d5443dec.gif)
