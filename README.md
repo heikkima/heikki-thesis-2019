@@ -1,6 +1,9 @@
 # Notice 
 By default these stacks will create resources in your eu-west-1 region. You can change this in sample/region/config/config.yaml
 
+## Thesis
+This project was my thesis work. If you are intrested to read the whole thesis report, here is the [link](http://urn.fi/URN:NBN:fi:amk-2019052913065). The thesis is written in Finnish.
+
 # Required
 * AWS account 
 * AWS IAM role with admin permissions 
